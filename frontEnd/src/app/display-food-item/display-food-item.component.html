@@ -1,0 +1,11 @@
+<div class="row">
+    <div *ngFor="let fooditem of foodItemArray" class="col-12 col-md-3">      
+            <div class="card mx-4 my-4 h-200" style="width: 18rem;">
+                <img src="{{ fooditem.dishUrl }}" class="img-responsive">
+                <h3>{{ fooditem.dishName }}</h3>
+                <div class="price">{{ fooditem.dishPrice }}</div>
+                <button class="btn btn-primary btn-sm mx-4" (click)="addToCart(fooditem)">Add to cart</button>
+                <p>{{ fooditem.category }}</p>
+            </div>
+    </div>
+</div>
